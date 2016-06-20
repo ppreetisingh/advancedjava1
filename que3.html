@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form validation</title>
+        
+
+    </head>
+    <body>
+        <div style="width: 40%; margin: 0 auto;">
+            <h6>Fill the form</h6>
+            <form action="" method="POST">
+               
+                <label>Name: <input type="text" placeholder="Name" id="Name" required ></label> <br>
+                <label>Email: <input type="text" placeholder="Email" id="email"
+                                        onblur= "(function(){
+                                            var email_id = document.getElementById('email').value;
+                                                if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email_id))                                               
+                                                    alert('invalid');
+                                        })();">
+                </label><br>
+                <label>Phone: <input type="tel" placeholder="Phone" id="phone" required></label><br>
+                <label>address: <input type="text" placeholder="Address" id="address" required></label><br>
+                <input type="submit" value="Submit form">
+            </form>
+        </div>
+    </body>
+</html>
